@@ -1,0 +1,97 @@
+import socket
+
+from src.config import LOCALE, ALGORITHM_SOCKET_BUFFER_SIZE, WIFI_IP, WIFI_PORT
+
+class Arduino_communicator:
+    def __init__(self, host=WIFI_IP, port=WIFI_PORT):
+
+        self.port = port
+        self.host = host
+
+
+        self.socket = None
+        self.address = None
+        self.client_sock = None
+
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        print('The port address is :', self.port)
+        print('The host address is :', self.host)
+        self.socket.bind((self.host, self.port))
+        self.socket.listen(1)
+
+    def connect(self):
+        while True:
+            retry = False
+
+            try:
+                print('Connecting with Arduino PC')
+
+                if self.client_sock is None:
+                    self.client_sock, self.address = self.socket.accept()
+                    print('Successfully connected with Arduino PC: ' + str(self.address))
+                    retry = False
+                
+            except Exception as error:
+                print('Connection with Arduino failed: ' + str(error))
+
+                if self.client_sock is not None:
+                    self.client_sock.close()
+                    self.client_sock = None
+                retry = True
+
+            if not retry:
+                break
+            print("Retrying Arduino connection...")
+
+    def disconnect(self):
+        try:
+            if self.client_sock is not None:
+                self.client_sock.close()
+                self.client_sock = None
+
+            print("Arduino disconnected Successfully")
+
+        except Exception as error:
+            print("Algorithm disconnect failed: " + str(error))
+
+    def disconnect_all(self):
+        try:
+            if self.client_sock is not None:
+                self.client_sock.close()
+                self.client_sock = None
+
+            if self.socket is not None:
+                self.socket.close()
+                self.socket = None
+
+            print("Arduino disconnected Successfully")
+
+        except Exception as error:
+            print("Ardunio disconnect failed: " + str(error))
+
+    def read(self):
+        try:
+            message = self.client_sock.recv(ALGORITHM_SOCKET_BUFFER_SIZE).strip()
+
+            if len(message) > 0:
+                print('Message From Arduino:')
+                print(message)
+                return message
+
+            return None
+
+        except Exception as error:
+            print('Arduino read process failed: ' + str(error))
+            raise error
+
+    def write(self, message):
+        try:
+            # print('To Algorithm:')
+            # print(message)
+            self.client_sock.sendall(message)
+
+        except Exception as error:
+            print('Arduino write process failed: ' + str(error))
+            raise error

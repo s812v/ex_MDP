@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Input fields for a, x, and y -->
+    <EditText
+        android:id="@+id/obsnum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="obstacle number" />
+
+    <EditText
+        android:id="@+id/obsx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="obstacle x" />
+
+    <EditText
+        android:id="@+id/obsy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="obstacle y" />
+
+    <!-- Button to perform an action -->
+    <Button
+        android:id="@+id/setOBButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place Obstacle"/>
+
+</LinearLayout>

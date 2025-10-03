@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_800"
+    tools:context=".ArenaFragment">
+
+
+    <com.sc2079.mdp28.Grid
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/combo1"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/combo2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <ImageView
+            android:id="@+id/obstacle1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/combo2"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/combo4"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <ImageView
+            android:id="@+id/obstacle2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="585dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/combo3"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/combo4"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <ImageView
+            android:id="@+id/obstacle3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/combo4"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <ImageView
+            android:id="@+id/obstacle4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/combo5"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toEndOf="@+id/combo4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <ImageView
+            android:id="@+id/obstacle5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/combo6"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/combo5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <ImageView
+            android:id="@+id/obstacle6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/combo7"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toEndOf="@+id/combo6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <!-- ImageView for the image -->
+        <ImageView
+            android:id="@+id/obstacle7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/combo8"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/combo7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
+
+        <ImageView
+            android:id="@+id/obstacle8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_900"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/light_blue_300" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:background="@color/fully_transparent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.584" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
+
+            <ImageButton
+                android:id="@+id/turnLeftButton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/forward_left" />
+
+            <ImageButton
+                android:id="@+id/forwardButton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginHorizontal="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/north" />
+
+            <ImageButton
+                android:id="@+id/turnRightButton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/forward_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
+
+            <ImageButton
+                android:id="@+id/leftReverseButton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/reverse_left" />
+
+            <ImageButton
+                android:id="@+id/reverseButton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginHorizontal="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/south" />
+
+            <ImageButton
+                android:id="@+id/rightReverseButton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/reverse_right" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:id="@+id/quad1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/resetObstaclesButton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/reset" />
+
+            <ImageButton
+                android:id="@+id/setObstaclesBtn"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginLeft="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/add" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quad2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/car_generator"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/add_car" />
+
+            <ImageButton
+                android:id="@+id/take_picture"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginLeft="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/camera" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="right"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/arenaSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/setup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/light_blue_300"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+                android:text="Setup"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/quickConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue_300"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+
+                android:text="Connect"
+
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <Button
+                android:id="@+id/sendObstaclesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/light_blue_300"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+
+                android:text="Send"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/stopBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue_300"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+
+                android:text="Stop"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttons"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/topDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/telemetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/currentLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:text="Telemetry"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/currentLocationData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="1"
+                    android:text="data"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    tools:text="40.0, 120.0" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bluetooth"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btStatusData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Not Connected"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/timerLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Timer"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Not started"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/gray_700"
+            android:clickable="false"
+            android:editable="false"
+            android:gravity="top|left"
+            android:padding="4dp"
+            android:scrollHorizontally="false"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/quad"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
